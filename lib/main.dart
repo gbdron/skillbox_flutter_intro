@@ -87,23 +87,19 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Column(
-              children: [
-                CarouselSlider(
-                  options: CarouselOptions(height: 400.0),
-                  items: widgets.map((widget) {
-                    return Builder(
-                      builder: (BuildContext context) {
-                        return Container(
-                            width: MediaQuery.of(context).size.width,
-                            margin: EdgeInsets.symmetric(horizontal: 5.0),
-                            decoration: BoxDecoration(color: Colors.blue[50]),
-                            child: widget);
-                      },
-                    );
-                  }).toList(),
-                ),
-              ],
+            CarouselSlider(
+              options: CarouselOptions(height: 400.0),
+              items: widgets.map((widget) {
+                return Builder(
+                  builder: (BuildContext context) {
+                    return Container(
+                        width: MediaQuery.of(context).size.width,
+                        margin: EdgeInsets.symmetric(horizontal: 5.0),
+                        decoration: BoxDecoration(color: Colors.blue[50]),
+                        child: widget);
+                  },
+                );
+              }).toList(),
             ),
           ],
         ),
